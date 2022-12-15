@@ -46,7 +46,7 @@ describe('updateRemoteStudents()', () => {
       expect(returnedArr[i]).not.toBe(originalArr[i]);
     };
   });
-  test('when passed an array containing one Northcoder object whose location property is defined, it should return a new array containing one unchanged Northcoder object', () => {
+  test('when passed one Northcoder object with location, it should return a new array with unchanged Northcoder object', () => {
     // arrange
     const originalArr = [
       {name: 'Hypatia', age: 31, location: 'leeds'},
@@ -58,7 +58,7 @@ describe('updateRemoteStudents()', () => {
       {name: 'Hypatia', age: 31, location: 'leeds'},
     ]);
   });
-  test('when passed an array containing one Northcoder object whose location property is not defined, it should return a new array containing an updated Northcoder object with the location property set to the string of `remote`.', () => {
+  test('when passed one Northcoder object with no location property, it should return a new array containing an updated Northcoder object', () => {
     // arrange
     const originalArr = [
       {name: 'Ramanujan', age: 22},
